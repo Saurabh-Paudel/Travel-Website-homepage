@@ -1,0 +1,79 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Node Modules
+node_modules
+
+# Build Directories
+dist
+dist-ssr
+build
+
+# Local Environment Files
+*.local
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+
+# Editor directories and files
+.vscode/
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Package Manager Lock Files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Vite and Tailwind specific files (if not tracking these)
+.vite/
+.vitepress/
+.vite/deps
+.vite_cache/
+
+# Tailwind CSS build files
+postcss.config.js
+tailwind.config.js
+
+# Ignore system-specific or temporary files
+Thumbs.db
+
+# Ignoring specific images
+src/images/Banner.png
+src/images/Decore.png
+
+# Ignore compiled output and backups
+*.lock
+*.tmp
+*.bak
+*.swp
+
+# Additional files or directories you don't want to track
+coverage/
+.idea/
+.cache/
+*.pid
+*.seed
+*.log
+
+eslint.config.js
+index.html
+package-lock.json
+package.json
+postcss.config.js
+tailwind.config.js
+vite.config.js
