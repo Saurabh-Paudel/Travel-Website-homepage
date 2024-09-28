@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { FaPlay } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { AiOutlineClose } from "react-icons/ai"; // Import close icon
+import { AiOutlineClose } from "react-icons/ai";
 import Decore from "../images/Decore.png";
 import Banner from "../images/banner.png";
 
@@ -19,7 +19,7 @@ export default function HomeBanner() {
 
   return (
     <div
-      className="h-[700px] w-full relative"
+      className="h-[700px] w-full relative mb-[100px]"
       style={{
         backgroundImage: `url(${Decore})`,
         backgroundSize: "contain",
@@ -34,12 +34,14 @@ export default function HomeBanner() {
         </div>
         <div className="hidden md:flex font-medium font-sans">
           <ul className="flex gap-[80px] text-black items-center lg:gap-[50px] xl:gap-[80px] 2xl:gap-[80px]">
-            {["Destination", "Hotels", "Flights", "Bookings", "Login"].map((item) => (
-              <li key={item} className="relative group">
-                {item}
-                <span className="block h-[2px] bg-[#F1A501] w-0 group-hover:w-full transition-all duration-300 ease-in-out absolute left-0 top-[100%]"></span>
-              </li>
-            ))}
+            {["Destination", "Hotels", "Flights", "Bookings", "Login"].map(
+              (item) => (
+                <li key={item} className="relative group">
+                  {item}
+                  <span className="block h-[2px] bg-[#F1A501] w-0 group-hover:w-full transition-all duration-300 ease-in-out absolute left-0 top-[100%]"></span>
+                </li>
+              )
+            )}
             <li>
               <span className="border-2 border-black rounded-md px-4 py-2">
                 Sign up
@@ -51,7 +53,10 @@ export default function HomeBanner() {
           </ul>
         </div>
         <div className="md:hidden">
-          <GiHamburgerMenu onClick={toggleMenu} className="text-black text-2xl" />
+          <GiHamburgerMenu
+            onClick={toggleMenu}
+            className="text-black text-2xl"
+          />
         </div>
       </div>
 
@@ -60,15 +65,22 @@ export default function HomeBanner() {
         <div className="md:hidden bg-white shadow-lg absolute top-16 right-0 left-0 px-5 py-4 z-20">
           <div className="flex justify-between items-center mb-4">
             <h2 className="text-xl font-bold">Menu</h2>
-            <AiOutlineClose onClick={toggleMenu} className="text-2xl cursor-pointer" /> {/* Close icon */}
+            <AiOutlineClose
+              onClick={toggleMenu}
+              className="text-2xl cursor-pointer"
+            />{" "}
+            {/* Close icon */}
           </div>
           <ul className="flex flex-col gap-4 text-black">
-            {["Destination", "Hotels", "Flights", "Bookings", "Login"].map((item) => (
-              <li key={item} className="relative group">
-                <span onClick={handleMenuItemClick}>{item}</span> {/* Close menu on click */}
-                <span className="block h-[2px] bg-[#F1A501] w-0 group-hover:w-full transition-all duration-300 ease-in-out absolute left-0 top-[100%]"></span>
-              </li>
-            ))}
+            {["Destination", "Hotels", "Flights", "Bookings", "Login"].map(
+              (item) => (
+                <li key={item} className="relative group">
+                  <span onClick={handleMenuItemClick}>{item}</span>{" "}
+                  {/* Close menu on click */}
+                  <span className="block h-[2px] bg-[#F1A501] w-0 group-hover:w-full transition-all duration-300 ease-in-out absolute left-0 top-[100%]"></span>
+                </li>
+              )
+            )}
             <li>
               <span className="border-2 border-black rounded-md px-4 py-2">
                 Sign up
