@@ -49,20 +49,19 @@ export default function Testimonials() {
     );
   };
 
-  // Automatically change testimonial every 5 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       handleNextTestimonial();
-    }, 5000); // 5 seconds interval
+    }, 5000);
 
-    return () => clearInterval(interval); // Clear interval on unmount to prevent memory leaks
+    return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="container mx-auto my-16 px-5 lg:px-0 relative">
-      <div className="flex flex-col lg:flex-row justify-between items-start">
+    <div className="container relative my-16 mx-auto flex flex-col items-center">
+      <div className="flex flex-col lg:flex-row items-start">
         {/* Left side text */}
-        <div className="lg:w-1/2 mb-10 lg:mb-0">
+        <div className="lg:w-auto mb-10 lg:mb-0 text-center lg:text-left">
           <h5 className="text-gray-400 font-semibold uppercase">
             Testimonials
           </h5>
@@ -72,9 +71,9 @@ export default function Testimonials() {
         </div>
 
         {/* Right side testimonial card */}
-        <div className="lg:w-auto relative md:px-20 sm:px-20">
+        <div className="lg:w-auto relative md:mx-20 sm:mx-20">
           {/* Main Testimonial */}
-          <div className="bg-white shadow-lg rounded-lg h-[245px] w-[504px] p-6 relative z-30 transition-opacity duration-500 ease-in-out ">
+          <div className="bg-white shadow-lg rounded-lg h-[245px] w-[504px] p-6 relative z-30 transition-opacity duration-500 ease-in-out">
             {/* Avatar */}
             <div className="absolute -top-10 -left-8">
               <img
@@ -115,8 +114,8 @@ export default function Testimonials() {
         </div>
       </div>
 
-      {/* Carousel Dots centered below the carousel */}
-      <div className="flex justify-center space-x-2 mt-8 md:mt-12 lg:justify-start lg:mt-24 lg:absolute">
+      {/* Carousel Dots centered for screens 745px or less, otherwise below the testimonial card */}
+      <div className="flex lg:absolute space-x-2 mt-10 md:mb-12 lg:ml-40 lg:mt-20 lg:w-full">
         {testimonials.map((_, index) => (
           <span
             key={index}
