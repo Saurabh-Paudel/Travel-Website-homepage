@@ -4,6 +4,7 @@ import Category from "./components/Category";
 import TopSelling from "./components/TopSelling";
 import "./index.css";
 import EasyStep from "./components/EasyStep";
+import Testimonials from "./components/Testimonial";
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
       <Category />
       <TopSelling />
       <EasyStep />
+      <Testimonials />
     </>
   );
 }
