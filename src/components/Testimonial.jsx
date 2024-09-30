@@ -68,6 +68,19 @@ export default function Testimonials() {
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
             What People Say About Us.
           </h2>
+
+          {/* Dots for large screens */}
+          <div className="hidden lg:flex lg:justify-start space-x-2 mt-4">
+            {testimonials.map((_, index) => (
+              <span
+                key={index}
+                className={`h-3 w-3 rounded-full cursor-pointer ${
+                  index === currentTestimonial ? "bg-[#39425D]" : "bg-[#E5E5E5]"
+                }`}
+                onClick={() => setCurrentTestimonial(index)}
+              />
+            ))}
+          </div>
         </div>
 
         {/* Right side testimonial card */}
@@ -114,8 +127,8 @@ export default function Testimonials() {
         </div>
       </div>
 
-      {/* Carousel Dots centered for screens 745px or less, otherwise below the testimonial card */}
-      <div className="flex lg:absolute space-x-2 mt-10 md:mb-12 lg:ml-40 lg:mt-20 lg:w-full">
+      {/* Dots for smaller screens */}
+      <div className="lg:hidden flex justify-center space-x-2 mt-4">
         {testimonials.map((_, index) => (
           <span
             key={index}
