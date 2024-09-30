@@ -2,9 +2,10 @@ import React from "react";
 import HomeBanner from "./components/HomeBanner";
 import Category from "./components/Category";
 import TopSelling from "./components/TopSelling";
-import "./index.css";
 import EasyStep from "./components/EasyStep";
 import Testimonials from "./components/Testimonial";
+import Company from "./components/Company";
+import "./index.css";
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
       <TopSelling />
       <EasyStep />
       <Testimonials />
+      <Company />
     </>
   );
 }
