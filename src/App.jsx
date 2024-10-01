@@ -5,6 +5,7 @@ import TopSelling from "./components/TopSelling";
 import EasyStep from "./components/EasyStep";
 import Testimonials from "./components/Testimonial";
 import Company from "./components/Company";
+import Subscribe from "./components/Subscribe"
 import "./index.css";
 
 export default function App() {
@@ -16,6 +17,7 @@ export default function App() {
       <EasyStep />
       <Testimonials />
       <Company />
+<Subscribe />
     </>
   );
 }
