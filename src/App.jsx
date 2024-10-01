@@ -5,8 +5,9 @@ import TopSelling from "./components/TopSelling";
 import EasyStep from "./components/EasyStep";
 import Testimonials from "./components/Testimonial";
 import Company from "./components/Company";
-import Subscribe from "./components/Subscribe"
+import Subscribe from "./components/Subscribe";
 import "./index.css";
+import Footer from "./components/Footer";
 
 export default function App() {
   return (
@@ -17,7 +18,8 @@ export default function App() {
       <EasyStep />
       <Testimonials />
       <Company />
-<Subscribe />
+      <Subscribe />
+      <Footer />
     </>
   );
 }
